@@ -1,0 +1,41 @@
+<html ng-app ng-controller="TitleController">
+  <head>
+    <!-- Meta -->
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>{{ title }}</title>
+    <!-- Styles -->
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='header'>
+      </div>
+      <h3 class='text-muted'>
+          <a href='.'>{{ title }}</a>
+        <small>Beta</small>
+      </h3>
+      <div class='alert alert-info'>
+        Testing GitHub Pages 
+      </div>
+      <div class='footer'>
+        <p>
+          Created by
+          <a href='http://twitter.com/4lb0'>Albo</a>
+        </p>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src='//code.jquery.com/jquery-1.10.1.min.js'></script>
+    <script src='//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+    <script>
+function TitleController($scope) {
+    $scope.title = "Santi, Carmen & Rodri";
+}
+    </script>
+  </body>
+</html>
+
