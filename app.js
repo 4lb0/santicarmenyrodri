@@ -1,4 +1,4 @@
-var host = window.location.host.match(/localhost/) ? 'http://127.0.0.1:9393' : 'http://santicarmenyrodri.heroku.com';
+var host = window.location.host.match(/localhost/) ? 'http://127.0.0.1:9393' : 'http://santicarmenyrodri.herokuapp.com';
 
 function AppController($scope, $location, $http) {
     var match;
