@@ -4,23 +4,44 @@
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <title>{{ title }}</title>
+    <title>Santi, Carmen &amp; Rodri</title>
     <!-- Styles -->
     <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css' rel='stylesheet'>
     <link href='main.css' rel='stylesheet'>
   </head>
   <body>
     <div class='container'>
-      <div class='header'>
+    <!-- carousel -->
+    <div id="carousel-movie-posters" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-movie-posters" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-movie-posters" data-slide-to="1"></li>
+        <li data-target="#carousel-movie-posters" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/part1.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="img/part2.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="img/part1.png" alt="" />
+        </div>
       </div>
-      <h3 class='text-muted'>
-          <a href='.'>{{ title }}</a>
-        <small>Beta</small>
-      </h3>
-      <div class='alert alert-info'>
-        Testing GitHub Pages 
-      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-movie-posters" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-movie-posters" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>      
+
       <div class='footer'>
         <p>
           Created by
