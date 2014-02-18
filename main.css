@@ -7,6 +7,8 @@ body{ background: #fff; }
 .featurette-heading { font-size: 50px; margin-top: 100px }
 .featurette-heading .text-muted { font-size: 75% }
 .stars .glyphicon{ font-size: 60% }
+.row.registry{ margin-top: 40px }
+#registry pre{ margin-top: 20px }
 
 /* Angular */
 [ng\:cloak], [ng-cloak], .ng-cloak { display: none !important }

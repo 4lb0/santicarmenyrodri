@@ -144,10 +144,60 @@
 
       <hr class="featurette-divider">    
 
+      <div class="row">
+        <div class="col-lg-4">
+          <h2><span class="glyphicon glyphicon-glass"></span> Cumpleaños</h2>
+          <p>Santi cumple el 1° de Abril, lo festejamos la primera parte de la fiesta. No vamos a hacer nada el 1°.</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h2><span class="glyphicon glyphicon-bell"></span> Bautismo</h2>
+          <p>El bautismo es en la Parroquia Santa María en <a href="https://www.google.com.ar/maps/place/Av+la+Plata+286/@-34.6181636,-58.4285888,17z/data=!3m1!4b1!4m2!3m1!1s0x95bcca5b32c18aad:0xfa4ebca37d27c5b9">Avenida La Plata 286</a>, Caballito, Capital Federal el <strong>sábado 29 de marzo</strong> a las <strong>17 hs</strong>.</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h2><span class="glyphicon glyphicon-heart"></span> Casamiento</h2>
+          <p>Todavía no tenemos fecha y lugar confirmadodel civil pero va a ser el mismo 4 de abril al mediodía. No vamos a casarnos por iglesia.</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <div class="row registry">
+        <div class="col-lg-2 col-lg-offset-5">
+            <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#registry">
+                <span class="glyphicon glyphicon-gift"></span>
+                Lista de Regalos 
+            </button>
+        </div>
+      </div><!-- /.row -->
+
+    <!-- regalos dialog -->
+<div class="modal fade" id="registry" tabindex="-1" role="dialog" aria-labelledby="registry-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="registry-label">Lista de Regalos</h4>        
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="btn-group">
+                    <button class="btn btn-default" ng-click="banco('galicia')">Banco Galicia</button>
+                    <button class="btn btn-default" ng-click="banco('santander')">Banco Santander Río</button>
+                    <button class="btn btn-default" ng-click="banco('otro')">Otro banco</button>
+                </div>
+            </div>
+            <div class="row">
+                <pre>{{ datosBanco }}</pre>
+           </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <hr class="featurette-divider">    
+
       <div class='footer text-center'>
         <p>
-          Created by
-          <a href='http://github.com/4lb0'>Albo</a>
+          Ideado y creado por <a href='http://github.com/4lb0'>Albo</a>.
         </p>
       </div>
 

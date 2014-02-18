@@ -67,4 +67,19 @@ function AppController($scope, $location, $http) {
             window.alert("Ha ocurrido un error, intentar mas tarde");
         });
     }
+
+    $scope.datosBanco = "Hace click en el banco que prefieras";
+    $scope.banco = function (banco) {
+        $scope.datosBanco = "Cargando...";
+        $http({
+            method: 'JSONP',
+            url: host + '/api/banco/' + banco + '?callback=JSON_CALLBACK'
+        }).
+        success(function(datosBanco, status) {
+            $scope.datosBanco  = datosBanco;
+        }).
+        error(function(data, status) {
+            $scope.datosBanco  = "Error: intente nuevamente";
+        });
+    }
 }
