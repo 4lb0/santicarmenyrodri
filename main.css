@@ -1,7 +1,12 @@
 body{ background: #fff; }
-#carousel-movie-posters{ background: #000; margin-bottom: 60px }
+#confirm-alert{ border-radius: 0 }
+#confirm label{ cursor: pointer }
+#carousel-movie-posters{ background: #000; margin-bottom: 60px; padding-top: 45px }
 #carousel-movie-posters .carousel-inner .item{ height: 650px }
 #carousel-movie-posters .carousel-inner .item img{ margin: auto }
 .featurette-heading { font-size: 50px; margin-top: 100px }
 .featurette-heading .text-muted { font-size: 75% }
 .stars .glyphicon{ font-size: 60% }
+
+/* Angular */
+[ng\:cloak], [ng-cloak], .ng-cloak { display: none !important }

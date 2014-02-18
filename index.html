@@ -1,4 +1,4 @@
-<html ng-app ng-controller="TitleController">
+<html ng-app ng-controller="AppController">
   <head>
     <!-- Meta -->
     <meta charset='utf-8'>
@@ -10,6 +10,42 @@
     <link href='main.css' rel='stylesheet'>
   </head>
   <body>
+
+    <div id="confirm-alert" class="navbar alert alert-{{ invitation.alert }} alert-dismissable navbar-fixed-top text-center" ng-show="invitation.show"  ng-cloak>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>{{ invitation.family }}</strong> {{ invitation.message }}.
+      <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#confirm">{{ invitation.action }}</a>
+    </div>  
+
+    <!-- confirm dialog -->
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm-ok-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="confirm-ok-label">Confirmar asistencia</h4>        
+      </div>
+      <div class="modal-body">
+        <p class="alert alert-{{ confirm.alert }}" ng-show="confirm.message">{{ confirm.message }}</p>
+          <p>Necesitamos que nos confirmes tu asistencia <strong>a la fiesta</strong>.</p>
+        <p>Recordá que es el día <strong>4 de Abril</strong> a partir de las 21 hs.</p>
+        <p>El civil y el bautismo no necesitan confirmación ya que no haremos nada al finalizar los mismos.</p>
+        <ul ng-if="invitation.total > 1" class="nav nav-stacked">
+            <li ng-repeat="label in invitation.labels()">
+                <label>
+                    <input type="radio" ng-model="$parent.$parent.total_confirmed" name="confirm" value="{{ $index + 1 }}">
+                    {{ label }}
+                </label>
+            </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-danger" ng-click="no()">No {{ invitation.go }} <span class="glyphicon glyphicon-remove"></span></button>
+          <button type="button" class="btn btn-success" ng-click="yes()">Confirmo que {{ invitation.go }} <span class="glyphicon glyphicon-ok"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- carousel -->
     <div id="carousel-movie-posters" class="carousel slide" data-ride="carousel">
@@ -108,10 +144,10 @@
 
       <hr class="featurette-divider">    
 
-      <div class='footer'>
+      <div class='footer text-center'>
         <p>
           Created by
-          <a href='http://twitter.com/4lb0'>Albo</a>
+          <a href='http://github.com/4lb0'>Albo</a>
         </p>
       </div>
 
