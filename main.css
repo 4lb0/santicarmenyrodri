@@ -9,6 +9,7 @@ body{ background: #fff; }
 .stars .glyphicon{ font-size: 60% }
 .row.registry{ margin-top: 40px }
 #registry pre{ margin-top: 20px }
+body.direcciones{ margin-top: 30px }
 
 /* Angular */
 [ng\:cloak], [ng-cloak], .ng-cloak { display: none !important }
